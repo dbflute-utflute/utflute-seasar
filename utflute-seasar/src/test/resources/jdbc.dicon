@@ -13,7 +13,7 @@
 		</property>
 		<property name="URL">
 			"jdbc:h2:file:"
-			+ @org.seasar.framework.util.ResourceUtil@getBuildDir(@org.seasar.dbflute.unit.seasar.dbflute.exbhv.FooBhv@class).getCanonicalPath()
+			+ @org.seasar.framework.util.ResourceUtil@getBuildDir(@org.dbflute.utflute.seasar.dbflute.exbhv.FooBhv@class).getCanonicalPath()
 			+ "/exampledb/exampledb"
 		</property>
 		<property name="user">"sa"</property>

@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 
 import junit.framework.AssertionFailedError;
 
-import org.dbflute.exception.factory.ExceptionMessageBuilder;
+import org.dbflute.helper.message.ExceptionMessageBuilder;
 import org.dbflute.utflute.core.policestory.javaclass.PoliceStoryJavaClassHandler;
 import org.dbflute.util.Srl;
 import org.seasar.framework.container.annotation.tiger.Binding;

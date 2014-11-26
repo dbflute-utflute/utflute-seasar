@@ -30,7 +30,7 @@ public abstract class ContainerTestCase extends SeasarTestCase {
     // ===================================================================================
     //                                                                           Attribute
     //                                                                           =========
-    /** The data source for database. (NotNull: after injection) */
+    /** The (main) data source for database. (NotNull: after injection) */
     protected DataSource _xdataSource;
 
     // ===================================================================================

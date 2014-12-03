@@ -13,7 +13,7 @@
  * either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-package org.dbflute.utflute.seasar.dicheck;
+package org.dbflute.utflute.seasar.s2container;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -38,8 +38,8 @@ public class SmartDeployDependencyChecker implements PoliceStoryJavaClassHandler
     protected final String _suffix;
 
     public SmartDeployDependencyChecker(String title, String suffix) {
-        this._title = title;
-        this._suffix = suffix;
+        _title = title;
+        _suffix = suffix;
     }
 
     public void handle(File srcFile, Class<?> clazz) { // field injection only for now

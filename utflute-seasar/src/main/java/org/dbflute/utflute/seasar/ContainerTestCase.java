@@ -19,7 +19,8 @@ import java.lang.reflect.Field;
 
 import javax.sql.DataSource;
 
-import org.dbflute.utflute.seasar.dicheck.SmartDeployDependencyChecker;
+import org.dbflute.utflute.seasar.s2container.SmartDeployDependencyChecker;
+import org.dbflute.utflute.seasar.sastruts.ActionUrlPatternChecker;
 
 /**
  * @author jflute
@@ -82,5 +83,20 @@ public abstract class ContainerTestCase extends SeasarTestCase {
             final String injectedClassName = extractInjectedClassName(injectedType);
             log(clazz.getSimpleName() + "." + field.getName() + " depends on " + injectedClassName);
         }
+    }
+
+    // ===================================================================================
+    //                                                                    SAStruts Checker
+    //                                                                    ================
+    protected void checkActionUrlPattern() {
+        doCheckActionUrlPattern("Action");
+    }
+
+    protected void doCheckActionUrlPattern(String actionSuffix) {
+        policeStoryOfJavaClassChase(createActionUrlPatternChecker(actionSuffix));
+    }
+
+    protected ActionUrlPatternChecker createActionUrlPatternChecker(String actionSuffix) {
+        return new ActionUrlPatternChecker(actionSuffix);
     }
 }

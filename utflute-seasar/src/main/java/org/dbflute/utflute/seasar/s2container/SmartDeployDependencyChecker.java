@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2014 the original author or authors.
+ * Copyright 2014-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-package org.dbflute.utflute.seasar.dicheck;
+package org.dbflute.utflute.seasar.s2container;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -38,8 +38,8 @@ public class SmartDeployDependencyChecker implements PoliceStoryJavaClassHandler
     protected final String _suffix;
 
     public SmartDeployDependencyChecker(String title, String suffix) {
-        this._title = title;
-        this._suffix = suffix;
+        _title = title;
+        _suffix = suffix;
     }
 
     public void handle(File srcFile, Class<?> clazz) { // field injection only for now

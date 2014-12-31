@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2014 the original author or authors.
+ * Copyright 2014-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,8 @@ import java.lang.reflect.Field;
 
 import javax.sql.DataSource;
 
-import org.dbflute.utflute.seasar.dicheck.SmartDeployDependencyChecker;
+import org.dbflute.utflute.seasar.s2container.SmartDeployDependencyChecker;
+import org.dbflute.utflute.seasar.sastruts.ActionUrlPatternChecker;
 
 /**
  * @author jflute
@@ -82,5 +83,20 @@ public abstract class ContainerTestCase extends SeasarTestCase {
             final String injectedClassName = extractInjectedClassName(injectedType);
             log(clazz.getSimpleName() + "." + field.getName() + " depends on " + injectedClassName);
         }
+    }
+
+    // ===================================================================================
+    //                                                                    SAStruts Checker
+    //                                                                    ================
+    protected void checkActionUrlPattern() {
+        doCheckActionUrlPattern("Action");
+    }
+
+    protected void doCheckActionUrlPattern(String actionSuffix) {
+        policeStoryOfJavaClassChase(createActionUrlPatternChecker(actionSuffix));
+    }
+
+    protected ActionUrlPatternChecker createActionUrlPatternChecker(String actionSuffix) {
+        return new ActionUrlPatternChecker(actionSuffix);
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2004-2014 the Seasar Foundation and the Others.
+ * Copyright 2014-2015 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import org.dbflute.utflute.lasta.ContainerTestCase;
 
 /**
  * @author jflute
- * @since 0.4.1 (2014/03/25 Tuesday)
+ * @since 0.5.1 (2015/03/22 Sunday)
  */
 public class Recycle2ndTest extends ContainerTestCase {
 

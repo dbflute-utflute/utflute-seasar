@@ -6,7 +6,7 @@ import org.dbflute.utflute.lasta.dbflute.exbhv.FooBhv;
 
 /**
  * @author jflute
- * @since 0.4.0 (2014/03/20 Thursday)
+ * @since 0.5.1 (2015/03/22 Sunday)
  */
 public abstract class FooBaseFacade {
 

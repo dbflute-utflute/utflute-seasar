@@ -23,7 +23,7 @@ import org.dbflute.utflute.lasta.s2container.SmartDeployDependencyChecker;
 
 /**
  * @author jflute
- * @since 0.1.0 (2011/07/24 Sunday)
+ * @since 0.5.1 (2015/03/22 Sunday)
  */
 public abstract class ContainerTestCase extends LastaDiTestCase {
 

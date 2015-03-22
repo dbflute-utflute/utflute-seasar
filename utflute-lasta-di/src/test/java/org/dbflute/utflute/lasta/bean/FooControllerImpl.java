@@ -4,7 +4,7 @@ import javax.annotation.Resource;
 
 /**
  * @author jflute
- * @since 0.4.0 (2014/03/16 Sunday)
+ * @since 0.5.1 (2015/03/22 Sunday)
  */
 public class FooControllerImpl implements FooController {
 

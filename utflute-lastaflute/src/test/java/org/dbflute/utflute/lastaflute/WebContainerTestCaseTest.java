@@ -13,7 +13,7 @@
  * either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-package org.dbflute.utflute.lasta;
+package org.dbflute.utflute.lastaflute;
 
 import org.dbflute.utflute.lasta.LastaDiTestCase;
 
@@ -21,7 +21,7 @@ import org.dbflute.utflute.lasta.LastaDiTestCase;
  * @author jflute
  * @since 0.5.1 (2015/03/22 Sunday)
  */
-public class LastaDiTestCaseTest extends LastaDiTestCase {
+public class WebContainerTestCaseTest extends LastaDiTestCase {
 
     public void test_xcanUseComponentNameByBindingNamingRule_basic() throws Exception {
         assertTrue(xcanUseComponentNameByBindingNamingRule("foo_bar", "bar"));

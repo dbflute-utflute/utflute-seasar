@@ -84,8 +84,8 @@ public class ActionUrlPatternChecker implements PoliceStoryJavaClassHandler {
             final Set<String> urlParamSet = new HashSet<String>(urlParamNames);
             final List<Field> targetFieldList = new ArrayList<Field>();
             final Class<?> formType = extractActionFormType(actionType);
-            for (Field field : formType.getDeclaredFields()) { // contains protected and concrete only
-                if (!isPublicInstanceMember(field.getModifiers())) {
+            for (Field field : extractCandidateFormFields(formType)) {
+                if (!isPublicInstanceMember(field.getModifiers())) { // because may contain static
                     continue;
                 }
                 // public instance field here
@@ -100,6 +100,10 @@ public class ActionUrlPatternChecker implements PoliceStoryJavaClassHandler {
                 throwUrlPatternPropertyNotFoundException(actionType, method, urlPattern, formType, targetFieldList, urlParamSet);
             }
         }
+    }
+
+    protected Field[] extractCandidateFormFields(final Class<?> formType) {
+        return formType.getFields(); // contains super class (hopefully only abstract...)
     }
 
     protected boolean isPublicInstanceMember(int modifiers) {

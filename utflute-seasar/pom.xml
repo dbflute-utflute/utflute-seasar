@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.dbflute.utflute</groupId>
 		<artifactId>utflute-base</artifactId>
-		<version>0.5.0-sp4</version>
+		<version>0.5.0-sp6</version>
 	</parent>
 	<artifactId>utflute-seasar</artifactId>
 	<packaging>jar</packaging>
@@ -14,6 +14,7 @@
 	<description>The unit test library for Seasar (with DBFlute)</description>
 
 	<properties>
+		<seasar.version>2.4.46</seasar.version>
 		<sastruts.version>1.0.4-sp9</sastruts.version>
 	</properties>
 

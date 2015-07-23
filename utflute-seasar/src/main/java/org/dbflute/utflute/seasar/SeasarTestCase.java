@@ -71,22 +71,22 @@ public abstract class SeasarTestCase extends InjectionTestCase {
     //                                         Static Cached
     //                                         -------------
     /** The cached configuration file of DI container. (NullAllowed: null means beginning or ending) */
-    protected static String _xcachedConfigFile;
+    private static String _xcachedConfigFile;
 
     /** The cached determination of suppressing web mock. (NullAllowed: null means beginning or ending) */
-    protected static Boolean _xcachedSuppressWebMock;
+    private static Boolean _xcachedSuppressWebMock;
 
     /** The cached configuration of servlet. (NullAllowed: when no web mock or beginning or ending) */
-    protected static MockletServletConfig _xcachedServletConfig;
+    private static MockletServletConfig _xcachedServletConfig;
 
     // -----------------------------------------------------
     //                                              Web Mock
     //                                              --------
     /** The mock request of the test case execution. (NullAllowed: when no web mock or beginning or ending) */
-    protected MockletHttpServletRequest _xmockRequest;
+    private MockletHttpServletRequest _xmockRequest;
 
     /** The mock response of the test case execution. (NullAllowed: when no web mock or beginning or ending) */
-    protected MockletHttpServletResponse _xmockResponse;
+    private MockletHttpServletResponse _xmockResponse;
 
     // ===================================================================================
     //                                                                            Settings
@@ -553,5 +553,48 @@ public abstract class SeasarTestCase extends InjectionTestCase {
         if (session != null) {
             session.setAttribute(name, value);
         }
+    }
+
+    // ===================================================================================
+    //                                                                            Accessor
+    //                                                                            ========
+    protected static String xgetCachedConfigFile() {
+        return _xcachedConfigFile;
+    }
+
+    protected static void xsetCachedConfigFile(String xcachedConfigFile) {
+        _xcachedConfigFile = xcachedConfigFile;
+    }
+
+    protected static Boolean xgetCachedSuppressWebMock() {
+        return _xcachedSuppressWebMock;
+    }
+
+    protected static void xsetCachedSuppressWebMock(Boolean xcachedSuppressWebMock) {
+        _xcachedSuppressWebMock = xcachedSuppressWebMock;
+    }
+
+    protected static MockletServletConfig xgetCachedServletConfig() {
+        return _xcachedServletConfig;
+    }
+
+    protected static void xsetCachedServletConfig(MockletServletConfig xcachedServletConfig) {
+        _xcachedServletConfig = xcachedServletConfig;
+    }
+
+    protected MockletHttpServletRequest xgetMockRequest() {
+        return _xmockRequest;
+    }
+
+    protected void xsetMockRequest(MockletHttpServletRequest xmockRequest) {
+        _xmockRequest = xmockRequest;
+    }
+
+    protected MockletHttpServletResponse xgetMockResponse() {
+        return _xmockResponse;
+    }
+
+    protected void xsetMockResponse(MockletHttpServletResponse xmockResponse) {
+        _xmockResponse = xmockResponse;
     }
 }

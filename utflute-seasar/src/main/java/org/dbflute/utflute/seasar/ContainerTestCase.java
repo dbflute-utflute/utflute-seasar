@@ -17,6 +17,7 @@ package org.dbflute.utflute.seasar;
 
 import java.lang.reflect.Field;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 import org.dbflute.utflute.seasar.s2container.SmartDeployDependencyChecker;
@@ -32,14 +33,13 @@ public abstract class ContainerTestCase extends SeasarTestCase {
     //                                                                           Attribute
     //                                                                           =========
     /** The (main) data source for database. (NotNull: after injection) */
-    protected DataSource _xdataSource;
+    @Resource
+    private DataSource _xdataSource;
 
     // ===================================================================================
     //                                                                         JDBC Helper
     //                                                                         ===========
-    /**
-     * {@inheritDoc}
-     */
+    /** {@inheritDoc} */
     @Override
     protected DataSource getDataSource() { // user method
         return _xdataSource;

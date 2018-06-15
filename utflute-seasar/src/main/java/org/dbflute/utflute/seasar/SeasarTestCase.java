@@ -95,8 +95,8 @@ public abstract class SeasarTestCase extends InjectionTestCase {
     //                                      Before Container
     //                                      ----------------
     @Override
-    protected void xsetupBeforeContainer() {
-        super.xsetupBeforeContainer();
+    protected void xsetupBeforeTestCaseContainer() {
+        super.xsetupBeforeTestCaseContainer();
         xprepareUnitTestEnv();
     }
 

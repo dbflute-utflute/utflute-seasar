@@ -15,8 +15,6 @@
  */
 package org.dbflute.utflute.seasar;
 
-import org.dbflute.utflute.seasar.SeasarTestCase;
-
 /**
  * @author jflute
  * @since 0.4.0 (2014/03/16 Sunday)

@@ -18,6 +18,22 @@
 		<sastruts.version>1.0.4-sp9</sastruts.version>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>maven.seasar.org</id>
+			<name>The Seasar Foundation Maven2 Repository</name>
+			<url>https://maven.seasar.org/maven2</url>
+		</repository>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>snapshot.maven.seasar.org</id>
+			<name>The Seasar Foundation Maven2 Snapshot Repository</name>
+			<url>https://maven.seasar.org/maven2-snapshot</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<!-- =============== -->
 		<!-- |   compile   | -->
